@@ -40,4 +40,12 @@ public class BlobBehaviour : MonoBehaviour
 			m_BounceTimer = UnityEngine.Random.Range(m_MinBounceTime, m_MaxBounceTime);
 		}
 	}
+
+    void OnJellyCollisionEnter2D(JellySprite.JellyCollision2D collision)
+    {
+        if (collision != null)
+        {
+            Debug.Log("Game Object collision : " + collision.Collision2D.gameObject.ToString());
+        }
+    }
 }
